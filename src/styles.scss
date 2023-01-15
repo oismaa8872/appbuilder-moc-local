@@ -6,7 +6,11 @@
 
 @include core();
 @include typography();
-@include light-theme($light-material-palette);
+
+$custom-palette: palette(
+  $primary: #0052A5,
+  $secondary: #e41c77);
+@include theme($custom-palette);
 
 body {
   background: hsla(var(--igx-surface-500));
